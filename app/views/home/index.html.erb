@@ -9,11 +9,11 @@
     <div class="column column-60 column-offset-20">
       <% if @articles_count == 0 %>
         <h3 class="hero-subtext">
-          Be the first to <%= link_to "write an article", articles_path %>.
+          Be the first to <%= link_to "write an article", articles_path, class: "brand-color" %>.
         </h3>
       <% else %>
         <h3 class="hero-subtext"> Here you can find more
-        <%= link_to "articles", articles_path, class:"bllue" %>.
+        <%= link_to "articles", articles_path, class: "brand-color" %>.
         </h3>
       <% end %>
     </div>
@@ -33,7 +33,7 @@
     <% @popular_articles.each do |article| %>
       <div class="row">
         <div class="column column-40 column-offset-20">
-          <h5><%= link_to article.title, article_path(article), class:"bllue" %></h5>
+          <h5><%= link_to article.title, article_path(article), class: "brand-color" %></h5>
         </div>
         <div class="column column-20">
           <p><%= article.views_count %> view(s) |
