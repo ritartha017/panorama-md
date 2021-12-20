@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Panorama</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+  </head>
+
+  <body style="background-color:#282c38;text-align:center">
+    <div class="container">
+      <div class="row nav">
+        <div class="column column-10 column-offset-20">
+          <%= link_to root_path do %>
+            <%= image_tag "logo", class: "logo"%>
+          <% end %>
+        </div>
+
+        <div class="column column-50 float-right">
+          <ul>
+            <li><%= link_to "Articles", articles_path, class: "yellow" %></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

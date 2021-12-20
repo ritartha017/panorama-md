@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="column column-60 column-offset-20 main-logo">
+      <p id="notice"><%= notice %></p>
+          <% @articles.each do |article| %>
+            <h4 style="font-weight: bold;">
+              <%= article.title %><br>
+            </h4>
+            <h5 class="text-body">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <%= article.body %>
+            </h5>
+            <br>
+            <small>
+              Original source: <%= link_to article.source[0..article.source.size/3.to_i]+"...", article.source, class: "silver"%>
+            </small>
+            <br>
+            View(s) <%= article.views_count %> |
+            <%= link_to 'Show', article, class: "purple" %> |
+            <%= link_to 'Edit', edit_article_path(article), class: "purple" %> |
+            <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "purple" %>
+            <br>
+            <hr style="border-top: 1px solid #eab509; background: transparent;">
+          <% end %>
+      </p>
+      <br>
+
+      <%= link_to 'New article', new_article_path, class: "purple" %>
+    </div>
+  </div>
+</div>
+

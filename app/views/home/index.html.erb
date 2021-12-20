@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="column column-60 column-offset-20">
+      <h1 class="hero-text">Welcome to <span class="brand-color"><b>Panorama.md</b></span></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column column-60 column-offset-20">
+      <% if @articles_count == 0 %>
+        <h3 class="hero-subtext">
+          Be the first to <%= link_to "write an article", articles_path %>.
+        </h3>
+      <% else %>
+        <h3 class="hero-subtext"> Here you can find more
+        <%= link_to "articles", articles_path, class:"bllue" %>.
+        </h3>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="column column-40 column-offset-20">
+    <%= image_tag "md-pic-1", style: "max-width: 152%;"%>
+  </div>
+
+  <% if @popular_articles.size > 0 %>
+    <div class="separator"></div>
+    <div class="row">
+      <div class="column column-60 column-offset-20">
+        <h3>Popular articles</h3>
+      </div>
+    </div>
+    <% @popular_articles.each do |article| %>
+      <div class="row">
+        <div class="column column-40 column-offset-20">
+          <h5><%= link_to article.title, article_path(article), class:"bllue" %></h5>
+        </div>
+        <div class="column column-20">
+          <p><%= article.views_count %> view(s) |
+            <font class="up-vote-color">+<%= article.positive_votes.nil? ? 0 : article.positive_votes%> </font> /
+            <font class="down-vote-color">-<%= article.negative_votes.nil? ? 0 : article.negative_votes %> </font></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

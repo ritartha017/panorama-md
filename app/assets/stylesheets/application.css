@@ -1,0 +1,118 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ h1, h2, h3, h4, h5, h6, td, th {
+  font-family: 'Nunito', sans-serif;
+  color:  #c5c5c7;
+}
+
+h5 {
+  text-align: left;
+}
+
+.silver {
+  color:  #c5c5c7;
+}
+
+.purple {
+  color: #c074d0;
+  /*font-weight: 1000;*/
+}
+
+.logo {
+  max-width: 130%;
+}
+
+p {
+  font-family: 'Nunito', sans-serif;
+  color:  #c5c5c7;
+  text-align: left;
+}
+
+.up-vote-color {
+  color: #92b742;
+}
+
+.yellow {
+  color: #eab509;
+}
+
+.down-vote-color {
+  color: #f24546;
+}
+
+.text-body {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.separator {
+  margin-bottom: 100px;
+}
+
+.main-logo, .hero-text {
+   text-align: center;
+   margin-top: 100px;
+ }
+
+ .main-logo img {
+   max-height: 150px;
+ }
+
+ .hero-subtext {
+   text-align: center;
+ }
+
+ .brand-color {
+   color: #c074d0;
+ }
+
+.button-brand-color {
+  background-color: #c074d0 !important;
+  border-color: #c074d0 !important;
+}
+
+.button-brand-color.button-clear,
+.button-brand-color.button-outline {
+  background-color: transparent;
+  color: #c074d0;
+}
+
+.button-brand-color.button-clear {
+  border-color: transparent;
+}
+
+.nav ul, ol {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: stretch;
+  align-content: center;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
