@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="column column-60 column-offset-20">
-      <h1 class="hero-text">Welcome to <span class="brand-color"><b>Panorama.md</b></span></h1>
+      <h1 class="hero-text">Bun venit pe <span class="brand-color"><b>Panorama.md</b></span></h1>
     </div>
   </div>
 
@@ -9,11 +9,11 @@
     <div class="column column-60 column-offset-20">
       <% if @articles_count == 0 %>
         <h3 class="hero-subtext">
-          Be the first to <%= link_to "write an article", articles_path, class: "brand-color" %>.
+          Fiți primul pentru a <%= link_to "scrie un articol", articles_path, class: "brand-color" %>.
         </h3>
       <% else %>
-        <h3 class="hero-subtext"> Here you can find more
-        <%= link_to "articles", articles_path, class: "brand-color" %>.
+        <h3 class="hero-subtext"> Aici puteți găsi mai multe
+        <%= link_to "articole", articles_path, class: "brand-color" %>.
         </h3>
       <% end %>
     </div>
@@ -27,7 +27,7 @@
     <div class="separator"></div>
     <div class="row">
       <div class="column column-60 column-offset-20">
-        <h3>Popular articles</h3>
+        <h3>Cele mai populare articole</h3>
       </div>
     </div>
     <% @popular_articles.each do |article| %>
